@@ -43,6 +43,9 @@ public class BaseTests {
     @AfterMethod
     public void screenshot() {
         Timestamp timeNow = new Timestamp(System.currentTimeMillis());
+        String timeNowFormated = timeNow.toString()
+                .replace(":", ".")
+                .replace(" ", "_");
         File evidence = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.moveFile(evidence, new File("target/screenshots/_screenshot_" + timeNow + ".jpg"));
