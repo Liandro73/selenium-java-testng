@@ -21,11 +21,11 @@ jobs:
       - name: Run test
         run: mvn clean test -DsuiteFile=testng.xml -Dbrowser=chrome
 
-      - name: Upload Test Artifacts
+      - name: Upload Test Evidences
         uses: actions/upload-artifact@v4
         with:
-          name: artifact
-          path: /home/runner/work/selenium-java-testng/selenium-java-testng/target/selenium-java-testng-*.jar
+          name: evidences
+          path: /home/runner/work/selenium-java-testng/selenium-java-testng/target/screenshots/*.jpp
 
       - name: Upload Test Logs
         uses: actions/upload-artifact@v4
@@ -33,4 +33,4 @@ jobs:
           name: logs
           path: |
             /home/runner/work/selenium-java-testng/selenium-java-testng/target/surefire-reports/Login/Smoke_Tests_Login.html
-            /home/runner/work/selenium-java-testng/selenium-java-testng/target/surefire-reports/Order/Smoke_Tests_Order.json
+            /home/runner/work/selenium-java-testng/selenium-java-testng/target/surefire-reports/Order/Smoke_Tests_Order.html
