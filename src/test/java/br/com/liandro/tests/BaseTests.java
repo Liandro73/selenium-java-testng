@@ -48,7 +48,7 @@ public class BaseTests {
                 .replace(" ", "_");
         File evidence = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.moveFile(evidence, new File("target/screenshots/_screenshot_" + timeNow + ".jpg"));
+            FileUtils.moveFile(evidence, new File("target/screenshots/_screenshot_" + timeNowFormated + ".jpg"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
