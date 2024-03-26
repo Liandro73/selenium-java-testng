@@ -19,7 +19,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Run test
-        run: mvn install -Dcucumber.filter.tags="@login"
+        run: mvn clean test -DsuiteFile=testng.xml -Dbrowser=chrome
 
       - name: Upload Test Artifacts
         uses: actions/upload-artifact@v4
