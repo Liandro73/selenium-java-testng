@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: evidences
-          path: /home/runner/work/selenium-java-testng/selenium-java-testng/target/screenshots/*.jpp
+          path: /home/runner/work/selenium-java-testng/selenium-java-testng/target/screenshots/*.jpg
 
       - name: Upload Test Logs
         uses: actions/upload-artifact@v4
